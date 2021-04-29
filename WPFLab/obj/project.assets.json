@@ -1,0 +1,98 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "ClassLibraryWPFLab/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ClassLibraryWPFLab.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibraryWPFLab.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClassLibraryWPFLab/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibraryWPFLab/ClassLibraryWPFLab.csproj",
+      "msbuildProject": "../ClassLibraryWPFLab/ClassLibraryWPFLab.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "ClassLibraryWPFLab >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\hambetn\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\WPFLab.csproj",
+      "projectName": "WPFLab",
+      "projectPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\WPFLab.csproj",
+      "packagesPath": "C:\\Users\\hambetn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\hambetn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\ClassLibraryWPFLab\\ClassLibraryWPFLab.csproj": {
+              "projectPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\ClassLibraryWPFLab\\ClassLibraryWPFLab.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

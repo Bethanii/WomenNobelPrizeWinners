@@ -1,0 +1,9 @@
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\bin\Debug\netcoreapp3.1\ClassLibraryWPFLab.deps.json
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\bin\Debug\netcoreapp3.1\ClassLibraryWPFLab.dll
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\bin\Debug\netcoreapp3.1\ClassLibraryWPFLab.pdb
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryWPFLab.csprojAssemblyReference.cache
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryWPFLab.AssemblyInfoInputs.cache
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryWPFLab.AssemblyInfo.cs
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryWPFLab.csproj.CoreCompileInputs.cache
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryWPFLab.dll
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryWPFLab.pdb
