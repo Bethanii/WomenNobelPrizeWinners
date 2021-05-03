@@ -33,7 +33,7 @@ namespace WPFLab
 
             if (Fruit.SelectedIndex == 0)
             {
-                MessageBox.Show("You chose the first fruit " + chosenFruit);
+                MessageBox.Show("You chose the first fruit, apple");
             }
             if (Fruit.SelectedIndex == 1)
             {
@@ -49,11 +49,11 @@ namespace WPFLab
             }
             if (Fruit.SelectedIndex == 4)
             {
-                MessageBox.Show("You chose the fifth fruit, strawberry");
+                MessageBox.Show("You chose the fifth fruit, blueberry");
             }
             if (Fruit.SelectedIndex == 5)
             {
-                MessageBox.Show("You chose the sixth fruit, blueberry");
+                MessageBox.Show("You chose the sixth fruit, strawberry");
             }
         }
 

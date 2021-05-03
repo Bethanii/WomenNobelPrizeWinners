@@ -7,7 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="daniele-levis-pelusi-dmnCGaqMEzE-unsplash.jpg" />
+    <None Remove="image %281%29.png" />
+    <None Remove="image.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClassLibraryWPFLab\ClassLibraryWPFLab.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="daniele-levis-pelusi-dmnCGaqMEzE-unsplash.jpg" />
+    <Resource Include="image (1).png" />
+    <Resource Include="image.png" />
   </ItemGroup>
 
 </Project>
