@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="daniele-levis-pelusi-dmnCGaqMEzE-unsplash.jpg" />
-    <None Remove="image %281%29.png" />
-    <None Remove="image.png" />
+    <None Remove="grad.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,9 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="daniele-levis-pelusi-dmnCGaqMEzE-unsplash.jpg" />
-    <Resource Include="image (1).png" />
-    <Resource Include="image.png" />
+    <Resource Include="grad.png" />
   </ItemGroup>
 
 </Project>

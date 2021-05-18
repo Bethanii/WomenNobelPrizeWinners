@@ -1,67 +1,117 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using ClassLibraryWPFLab;
 
 namespace WPFLab
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        static string filePath = System.Environment.GetEnvironmentVariable("USERPROFILE") + "\\WomenNobelPrizes.csv";
+        static int countLines = GetCount(filePath); 
+        WomenClass[] w = GetWinner(filePath, countLines);
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        private void btnFruit_Click(object sender, RoutedEventArgs e)
+        static WomenClass[] GetWinner(string filePath, int count)
         {
-           ComboBoxItem chosenFruit = (ComboBoxItem)Fruit.SelectedItem;
-           string chosen = chosenFruit.Content.ToString();
-         //   MessageBox.Show("You picked " + chosen);
+            string strRead;
+            System.IO.FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            StreamReader readerW = new StreamReader(fs);
+            strRead = readerW.ReadLine();  
+            WomenClass[] wo = new WomenClass[count];
 
-            if (Fruit.SelectedIndex == 0)
+            for (int counter = 1; counter < count; ++counter) 
             {
-                MessageBox.Show("You chose the first fruit, apple");
+                strRead = readerW.ReadLine(); 
+                string[] Parts = strRead.Split(',');
+                wo[counter] = new WomenClass();
+                wo[counter].Number = Convert.ToInt32(Parts[0]);
+                wo[counter].FullName = Parts[1];
+                wo[counter].Country = Parts[2];
+                wo[counter].Category = Parts[3];
+            } 
+            readerW.Close();
+            fs.Close();
+            return wo;
+        }
+        private void btnParty_Click(object sender, RoutedEventArgs e)
+        {
+            string chosen = "";
+            try
+            {
+                ComboBoxItem chosenItem = (ComboBoxItem)categoryBox.SelectedItem;
+                chosen = chosenItem.Content.ToString();
             }
-            if (Fruit.SelectedIndex == 1)
+            catch
             {
-                MessageBox.Show("You chose the second fruit, orange");
+                MessageBox.Show("Choose a category");
+                return;
             }
-            if (Fruit.SelectedIndex == 2)
+            string display = "Nobel prize winners of the " + chosen + " category:\n";
+            var queryResults = from p in w
+                               where p?.Country == chosen 
+                               select p; 
+            foreach (var Name in queryResults)
             {
-                MessageBox.Show("You chose the third fruit, banana");
-            }
-            if (Fruit.SelectedIndex == 3)
-            {
-                MessageBox.Show("You chose the fourth fruit, cherry");
-            }
-            if (Fruit.SelectedIndex == 4)
-            {
-                MessageBox.Show("You chose the fifth fruit, blueberry");
-            }
-            if (Fruit.SelectedIndex == 5)
-            {
-                MessageBox.Show("You chose the sixth fruit, strawberry");
+                WinnerList.Items.Add(new WomenClass()
+                {
+                    FullName = Name.FullName,
+                    Country = Name.Country,
+                    Category = Name.Category,
+                });
             }
         }
-
+        static int GetCount(string file)
+        {
+            int count = 0;
+            string strRead;
+            FileStream sr = new FileStream(file, FileMode.Open, FileAccess.Read);
+            StreamReader readerCount = new StreamReader(sr);
+            strRead = readerCount.ReadLine();  
+            while (strRead != null)
+            {
+                ++count;
+                strRead = readerCount.ReadLine(); 
+            }
+            readerCount.Close();
+            sr.Close();
+            return count;
+        }
         private void btnEducation_Click(object sender, RoutedEventArgs e)
         {
-            ComboBoxItem chosenItem = (ComboBoxItem)Vegtable.SelectedItem;
-            string chosen = chosenItem.Content.ToString();
-             MessageBox.Show("You picked " + chosen);
+            string chosen = "";
+            try
+            {
+                ComboBoxItem chosenItem = (ComboBoxItem)countryBox.SelectedItem;
+                chosen = chosenItem.Content.ToString();
             }
+            catch
+            {
+                MessageBox.Show("Choose a category", "Category");
+                return;
+            }
+            string display = "Nobel prize winners from " + chosen + "\n";
+            var queryResults = from p in w
+                               where p?.Category == chosen
+                               select p; 
+            foreach (var Name in queryResults)
+            {
+                WinnerList.Items.Add(new WomenClass()
+                {
+                    FullName = Name.FullName,
+                    Country = Name.Country,
+                    Category = Name.Category,
+                });
+            }
+        }
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            categoryBox.SelectedIndex = 0;
+            countryBox.SelectedIndex = 1;  
+        }
         }
     }

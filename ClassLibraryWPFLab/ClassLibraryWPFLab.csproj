@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="President" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="President" />
+  </ItemGroup>
+
 </Project>

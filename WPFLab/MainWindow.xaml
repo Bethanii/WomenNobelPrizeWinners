@@ -5,47 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFLab"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontSize="18" FontFamily="Segoe UI Black">
-    <Grid Margin="20" Background="#FFB0D458">
+        Title="MainWindow" Height="650" Width="900" FontSize="18" FontFamily="Segoe UI Black">
+    <Grid Margin="20">
+        <Grid.Background>
+            <ImageBrush ImageSource="/grad.png"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="26*"/>
-            <ColumnDefinition Width="95*"/>
-            <ColumnDefinition Width="95*"/>
-            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="96*"/>
-            <RowDefinition Height="22*"/>
-            <RowDefinition Height="119*"/>
-            <RowDefinition Height="119*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0"
-                   Text= "Vegtable and Fruit" FontFamily="Arial Black" FontSize="16" Margin="10,10,10,10" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Column="0" Grid.Row="1" FontSize="16" FontWeight="SemiBold" 
-                   Text="Select fruit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="93,49,0,0" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Column="0" Grid.Row="3" FontSize="16" FontWeight="SemiBold"
-                   Text="Select vegtable" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="61,0,0,0" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnFruit" Content="Get Fruit" Grid.Column="3"
-                Grid.Row="1" Height="30" Width="150" Click="btnFruit_Click" Margin="20,45,20,22"/>
-        <Button x:Name="btnVegtable" Content="Get Vegtable" Grid.Column="3" 
-                Grid.Row="3" Margin="30,20,20,20" Click="btnEducation_Click" />
-        <ComboBox Name="Fruit" Grid.Column="2" Grid.Row="1" Height="30" SelectedItem="Fruit_chosenFruit" Margin="0,45,0,22">
-            <ComboBoxItem Content="Apple" Background="#FFDE2C2C"></ComboBoxItem>
-            <ComboBoxItem Content="Orange" Background="#FFFD560D"></ComboBoxItem>
-            <ComboBoxItem Content="Banana" Background="#FFFFDA07"></ComboBoxItem>
-            <ComboBoxItem Content="Cherry" Background="Maroon"></ComboBoxItem>
-            <ComboBoxItem Content="Blueberry" Background="#FF111DE0"></ComboBoxItem>
-            <ComboBoxItem Content="Strawberry" Background="#FFD62121"></ComboBoxItem>
+                   Text= "Women Nobel Prize Winners" FontFamily="Arial Black" FontSize="16" Margin="10,10,10,10" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" FontSize="21" FontWeight="SemiBold" 
+                   Text="Select category" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" FontSize="21" FontWeight="SemiBold"
+                   Text="Select country" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnParty" Content="Get Category" Grid.Column="4" Grid.ColumnSpan="2"
+                Grid.Row="1" Height="35" Width="150" Click="btnParty_Click"/>
+        <Button x:Name="btnEducation" Content="Get Country" Grid.Column="4" 
+                Grid.Row="2" Height="35" Width="150" Click="btnEducation_Click" Grid.ColumnSpan="2"/>
+        <ComboBox Name="categoryBox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Height="35">
+            <ComboBoxItem Content="Chemistry"></ComboBoxItem>
+            <ComboBoxItem Content="Literature"></ComboBoxItem>
+            <ComboBoxItem Content="Physiology or Medicine"></ComboBoxItem>
+            <ComboBoxItem Content="Peace"></ComboBoxItem>
+            <ComboBoxItem Content="Physics"></ComboBoxItem>
+            <ComboBoxItem Content="Economics"></ComboBoxItem>
         </ComboBox>
-        <ComboBox Name="Vegtable" Grid.Column="2" Grid.Row="3" Height="30" Margin="0,44,0,44">
-            <ComboBoxItem Content="Celery" Background="#FF89E76A"></ComboBoxItem>
-            <ComboBoxItem Content="Brocoli" Background="#FF1E7A0B"></ComboBoxItem>
-            <ComboBoxItem Content="Carrot" Background="#FFEF6512"></ComboBoxItem>
-            <ComboBoxItem Content="Squash" Background="#FFD0E708"></ComboBoxItem>
-            <ComboBoxItem Content="Lettuce" Background="#FF4EB639"></ComboBoxItem>
-            <ComboBoxItem Content="Onion" Background="#FFB9A3DC"></ComboBoxItem>
+        <ComboBox Name="countryBox" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Height="35" Loaded="Grid_Loaded" SelectedItem="Country_chosen"  >
+            <ComboBoxItem Content="Italy"></ComboBoxItem>
+            <ComboBoxItem Content="France"></ComboBoxItem>
+            <ComboBoxItem Content="Germany"></ComboBoxItem>
+            <ComboBoxItem Content="Norway"></ComboBoxItem>
+            <ComboBoxItem Content="Chile"></ComboBoxItem>
+            <ComboBoxItem Content="Liberia"></ComboBoxItem>
+            <ComboBoxItem Content="Canada"></ComboBoxItem>
+            <ComboBoxItem Content="Israel"></ComboBoxItem>
+            <ComboBoxItem Content="United States"></ComboBoxItem>
+            <ComboBoxItem Content="Czech Republic"></ComboBoxItem>
+            <ComboBoxItem Content="Pakistan"></ComboBoxItem>
+            <ComboBoxItem Content="Poland"></ComboBoxItem>
+            <ComboBoxItem Content="South Africa"></ComboBoxItem>
+            <ComboBoxItem Content="Guatemala"></ComboBoxItem>
+            <ComboBoxItem Content="India"></ComboBoxItem>
+            <ComboBoxItem Content="Iraq"></ComboBoxItem>
+            <ComboBoxItem Content="Kenya"></ComboBoxItem>
+            <ComboBoxItem Content="Yemen"></ComboBoxItem>
+            <ComboBoxItem Content="Ukraine"></ComboBoxItem>
+            <ComboBoxItem Content="Sweden"></ComboBoxItem>
         </ComboBox>
+
+        <ListView VerticalAlignment = "Top" Margin = "10"
+        Name = "WinnerList" Grid.Column="1" Grid.Row="4" Grid.RowSpan = "3" Grid.ColumnSpan = "5">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Number" DisplayMemberBinding ="{Binding Number}"
+                                Width="120"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding ="{Binding FullName}"
+                                Width="180"/>
+                    <GridViewColumn Header="Catergory" DisplayMemberBinding ="{Binding Country}"
+                                Width="120"/>
+                    <GridViewColumn Header="Country" DisplayMemberBinding ="{Binding Category}"
+                                Width="120"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
