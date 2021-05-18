@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
-      "ClassLibraryWPFLab/1.0.0": {
+      "ClassLibraryNobelPrize/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
-          "bin/placeholder/ClassLibraryWPFLab.dll": {}
+          "bin/placeholder/ClassLibraryNobelPrize.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ClassLibraryWPFLab.dll": {}
+          "bin/placeholder/ClassLibraryNobelPrize.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "ClassLibraryWPFLab/1.0.0": {
+    "ClassLibraryNobelPrize/1.0.0": {
       "type": "project",
-      "path": "../ClassLibraryWPFLab/ClassLibraryWPFLab.csproj",
-      "msbuildProject": "../ClassLibraryWPFLab/ClassLibraryWPFLab.csproj"
+      "path": "../ClassLibraryWPFLab/ClassLibraryNobelPrize.csproj",
+      "msbuildProject": "../ClassLibraryWPFLab/ClassLibraryNobelPrize.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "ClassLibraryWPFLab >= 1.0.0"
+      "ClassLibraryNobelPrize >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\WPFLab.csproj",
-      "projectName": "WPFLab",
-      "projectPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\WPFLab.csproj",
+      "projectUniqueName": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\NobelPrize.csproj",
+      "projectName": "NobelPrize",
+      "projectPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\NobelPrize.csproj",
       "packagesPath": "C:\\Users\\hambetn\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\WPFLab\\obj\\",
       "projectStyle": "PackageReference",
@@ -58,8 +58,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\ClassLibraryWPFLab\\ClassLibraryWPFLab.csproj": {
-              "projectPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\ClassLibraryWPFLab\\ClassLibraryWPFLab.csproj"
+            "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\ClassLibraryWPFLab\\ClassLibraryNobelPrize.csproj": {
+              "projectPath": "C:\\Users\\hambetn\\source\\repos\\WPFLabSolution\\ClassLibraryWPFLab\\ClassLibraryNobelPrize.csproj"
             }
           }
         }

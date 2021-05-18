@@ -1,0 +1,9 @@
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\bin\Debug\netcoreapp3.1\ClassLibraryNobelPrize.deps.json
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\bin\Debug\netcoreapp3.1\ClassLibraryNobelPrize.dll
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\bin\Debug\netcoreapp3.1\ClassLibraryNobelPrize.pdb
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryNobelPrize.csprojAssemblyReference.cache
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryNobelPrize.AssemblyInfoInputs.cache
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryNobelPrize.AssemblyInfo.cs
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryNobelPrize.csproj.CoreCompileInputs.cache
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryNobelPrize.dll
+C:\Users\hambetn\source\repos\WPFLabSolution\ClassLibraryWPFLab\obj\Debug\netcoreapp3.1\ClassLibraryNobelPrize.pdb

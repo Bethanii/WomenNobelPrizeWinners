@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="flower.png" />
+    <None Remove="grad.png" />
+    <None Remove="image %281%29.png" />
+    <None Remove="image %282%29.png" />
+    <None Remove="image %283%29.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryWPFLab\ClassLibraryNobelPrize.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="flower.png" />
+    <Resource Include="grad.png" />
+    <Resource Include="image (1).png" />
+    <Resource Include="image (2).png" />
+    <Resource Include="image (3).png" />
+  </ItemGroup>
+
+</Project>

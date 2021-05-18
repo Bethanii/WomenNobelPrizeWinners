@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "NobelPrize/1.0.0": {
+        "dependencies": {
+          "ClassLibraryNobelPrize": "1.0.0"
+        },
+        "runtime": {
+          "NobelPrize.dll": {}
+        }
+      },
+      "ClassLibraryNobelPrize/1.0.0": {
+        "runtime": {
+          "ClassLibraryNobelPrize.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NobelPrize/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClassLibraryNobelPrize/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

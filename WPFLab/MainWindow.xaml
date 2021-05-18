@@ -8,7 +8,7 @@
         Title="MainWindow" Height="650" Width="900" FontSize="18" FontFamily="Segoe UI Black">
     <Grid Margin="20">
         <Grid.Background>
-            <ImageBrush ImageSource="/grad.png"/>
+            <ImageBrush ImageSource="/image (3).png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150*"/>
@@ -29,15 +29,15 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0"
-                   Text= "Women Nobel Prize Winners" FontFamily="Arial Black" FontSize="16" Margin="10,10,10,10" Grid.ColumnSpan="2"/>
+                   Text= "Women Nobel Prize Winners" FontFamily="Arial Black" FontSize="30" Margin="10,10,21,10" Grid.ColumnSpan="4"/>
         <TextBlock Grid.Column="0" Grid.Row="1" FontSize="21" FontWeight="SemiBold" 
                    Text="Select category" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         <TextBlock Grid.Column="0" Grid.Row="2" FontSize="21" FontWeight="SemiBold"
                    Text="Select country" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnParty" Content="Get Category" Grid.Column="4" Grid.ColumnSpan="2"
-                Grid.Row="1" Height="35" Width="150" Click="btnParty_Click"/>
-        <Button x:Name="btnEducation" Content="Get Country" Grid.Column="4" 
-                Grid.Row="2" Height="35" Width="150" Click="btnEducation_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnCategory" Content="Get Category" Grid.Column="4" Grid.ColumnSpan="2"
+                Grid.Row="1" Height="35" Width="150" Click="btnCategory_Click"/>
+        <Button x:Name="btnCountry" Content="Get Country" Grid.Column="4" 
+                Grid.Row="2" Height="35" Width="150" Click="btnCountry_Click" Grid.ColumnSpan="2"/>
         <ComboBox Name="categoryBox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Height="35">
             <ComboBoxItem Content="Chemistry"></ComboBoxItem>
             <ComboBoxItem Content="Literature"></ComboBoxItem>
@@ -70,17 +70,22 @@
         </ComboBox>
 
         <ListView VerticalAlignment = "Top" Margin = "10"
-        Name = "WinnerList" Grid.Column="1" Grid.Row="4" Grid.RowSpan = "3" Grid.ColumnSpan = "5">
+        Name = "WinnerList" Grid.Column="0" Grid.Row="3" Grid.RowSpan = "3" Grid.ColumnSpan = "7">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Number" DisplayMemberBinding ="{Binding Number}"
-                                Width="120"/>
                     <GridViewColumn Header="Name" DisplayMemberBinding ="{Binding FullName}"
-                                Width="180"/>
+                                Width="auto"/>
                     <GridViewColumn Header="Catergory" DisplayMemberBinding ="{Binding Country}"
-                                Width="120"/>
+                                Width="auto"/>
                     <GridViewColumn Header="Country" DisplayMemberBinding ="{Binding Category}"
-                                Width="120"/>
+                                Width="auto"/>
+                    <GridViewColumn Header="Description">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Description}" FontSize="15px" TextWrapping="Wrap" Width="260"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

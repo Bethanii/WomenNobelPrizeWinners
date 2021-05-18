@@ -33,13 +33,16 @@ namespace WPFLab
                 wo[counter].FullName = Parts[1];
                 wo[counter].Country = Parts[2];
                 wo[counter].Category = Parts[3];
+                wo[counter].Description = Parts[4];
             } 
             readerW.Close();
             fs.Close();
             return wo;
         }
-        private void btnParty_Click(object sender, RoutedEventArgs e)
+        private void btnCategory_Click(object sender, RoutedEventArgs e)
         {
+            ClearGrid(WinnerList);
+            MakeVisible(WinnerList);
             string chosen = "";
             try
             {
@@ -62,6 +65,7 @@ namespace WPFLab
                     FullName = Name.FullName,
                     Country = Name.Country,
                     Category = Name.Category,
+                    Description = Name.Description
                 });
             }
         }
@@ -81,8 +85,10 @@ namespace WPFLab
             sr.Close();
             return count;
         }
-        private void btnEducation_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnCountry_Click(object sender, RoutedEventArgs e)
+        { 
+            ClearGrid(WinnerList);
+            MakeVisible(WinnerList);
             string chosen = "";
             try
             {
@@ -105,13 +111,29 @@ namespace WPFLab
                     FullName = Name.FullName,
                     Country = Name.Country,
                     Category = Name.Category,
+                    Description = Name.Description
                 });
+            }
+        }
+        static void ClearGrid(ListView WinnerList)
+        {
+            int rows = WinnerList.Items.Count;
+            for(int counter = rows - 1; counter >= 0; --counter)
+            {
+                WinnerList.Items.RemoveAt(counter);
+            }
+        }
+
+        static void MakeVisible(ListView WinnerList)
+        {
+            if(WinnerList.Visibility == Visibility.Hidden)
+            {
+                WinnerList.Visibility = Visibility.Visible;
             }
         }
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            categoryBox.SelectedIndex = 0;
-            countryBox.SelectedIndex = 1;  
+            WinnerList.Visibility = Visibility.Hidden;
         }
         }
     }
