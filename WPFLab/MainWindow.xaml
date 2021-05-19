@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFLab"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="900" FontSize="18" FontFamily="Segoe UI Black">
-    <Grid Margin="20">
+        Title="" Height="650" Width="900" FontSize="18" FontFamily="Segoe UI Black">
+    <Grid Margin="0">
         <Grid.Background>
             <ImageBrush ImageSource="/image (3).png"/>
         </Grid.Background>
@@ -29,7 +29,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0"
-                   Text= "Women Nobel Prize Winners" FontFamily="Arial Black" FontSize="30" Margin="10,10,21,10" Grid.ColumnSpan="4"/>
+                   Text= "Women Nobel Prize Winners" FontFamily="Arial Black" FontSize="30" Grid.ColumnSpan="7" TextAlignment="center" VerticalAlignment="Center"/>
         <TextBlock Grid.Column="0" Grid.Row="1" FontSize="21" FontWeight="SemiBold" 
                    Text="Select category" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         <TextBlock Grid.Column="0" Grid.Row="2" FontSize="21" FontWeight="SemiBold"
@@ -74,15 +74,15 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" DisplayMemberBinding ="{Binding FullName}"
-                                Width="auto"/>
+                                Width="160"/>
                     <GridViewColumn Header="Catergory" DisplayMemberBinding ="{Binding Country}"
-                                Width="auto"/>
+                                Width="140"/>
                     <GridViewColumn Header="Country" DisplayMemberBinding ="{Binding Category}"
-                                Width="auto"/>
+                                Width="140"/>
                     <GridViewColumn Header="Description">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Description}" FontSize="15px" TextWrapping="Wrap" Width="260"/>
+                                <TextBlock Text="{Binding Description}" FontSize="15px" TextWrapping="Wrap" Width="410"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
